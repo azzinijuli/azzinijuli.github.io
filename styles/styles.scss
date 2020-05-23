@@ -1,0 +1,93 @@
+@import "base/reset";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
+$color1: black;
+$color2: white;
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: $color1;
+}
+
+.main {
+	font-family: 'Open Sans', sans-serif;
+	color: $color2;
+	.home-container {
+		.header-wrapper {
+			position: fixed;
+			display: flex;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.801218);
+			.nav-brand {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 1rem 3rem;
+			}
+			.navbar {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.nav-menu{
+					display: flex;
+					list-style: none;
+					font-weight: bold;
+					font-size: 1rem;
+					text-align: center;
+					.menu-item {
+						padding: 1rem;
+					}
+				}
+			}
+		}
+		.hero-screen {
+			background-image: url("../assets/portada.png");
+			background-position: center;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+			.hero-wrapper {
+				padding-left: 3rem;
+				max-width: 400px;
+				width: 100%;
+				.hero-original {
+					padding-top: 9rem;
+					.original-title {
+						font-size: 1.2rem;
+						font-weight: bold;
+					}
+				}
+				.hero-title {
+					.title {
+						font-size: 5rem;
+						font-weight: bold;
+						padding: 1rem 0;
+					}
+				}
+				.hero-buttons {
+					padding: 2rem 0;
+					.button {
+						padding: 1rem 2rem;
+						background-color: rgba(128, 126, 126, 0.685);
+						border-radius: 10px;
+						margin-right: 2rem;
+					}
+				}
+				.hero-season {
+					padding: 0.8rem 0;
+				}
+				.hero-description {
+					line-height: 1.5rem;
+				}
+			}
+		}
+
+		.series {
+			padding-left: 3rem;
+			.series-title {
+				font-weight: bold;
+			}
+		}
+		
+	}
+}
