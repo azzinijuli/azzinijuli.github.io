@@ -73,7 +73,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 0.5rem 3rem;
 }
 .main .home-container .header-wrapper .navbar {
   display: flex;
@@ -82,13 +82,16 @@ body {
 }
 .main .home-container .header-wrapper .navbar .nav-menu {
   display: flex;
-  list-style: none;
   font-weight: bold;
   font-size: 1rem;
-  text-align: center;
 }
 .main .home-container .header-wrapper .navbar .nav-menu .menu-item {
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+}
+.main .home-container .header-wrapper .navbar .nav-menu .menu-item:hover {
+  cursor: pointer;
+  color: rgba(157, 151, 151, 0.541521);
+  transition: 0.3s;
 }
 .main .home-container .hero-screen {
   background-image: url("../assets/portada.png");
@@ -123,8 +126,19 @@ body {
   border-radius: 9px;
   margin-right: 1.8rem;
 }
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .button:hover {
+  cursor: pointer;
+  background-color: rgba(85, 85, 85, 0.404);
+  transition: 0.3s;
+}
 .main .home-container .hero-screen .hero-wrapper .hero-season {
   padding: 0.8rem 0;
+}
+.main .home-container .hero-screen .hero-wrapper .hero-season:hover {
+  margin-left: 0.8rem;
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 .main .home-container .hero-screen .hero-wrapper .hero-description {
   line-height: 1.5rem;
@@ -141,10 +155,7 @@ body {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding-bottom: 0.5rem;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
+  padding-bottom: 1rem;
 }
 .main .home-container .series-selection .series-wrapper .series-carousel::-webkit-scrollbar {
   height: 8px;
@@ -154,16 +165,36 @@ body {
   background: black;
 }
 .main .home-container .series-selection .series-wrapper .series-carousel::-webkit-scrollbar-thumb {
-  background: rgba(136, 136, 136, 0.404);
+  background: rgba(157, 151, 151, 0.541521);
   border-radius: 20px;
 }
 .main .home-container .series-selection .series-wrapper .series-carousel::-webkit-scrollbar-thumb:hover {
   background: rgba(85, 85, 85, 0.404);
   border-radius: 20px;
 }
-.main .home-container .series-selection .series-wrapper .series-carousel .serie {
+.main .home-container .series-selection .series-wrapper .series-carousel .serie-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-right: 1rem;
-  scroll-snap-align: center;
+}
+.main .home-container .series-selection .series-wrapper .series-carousel .serie-wrapper .serie {
+  scroll-snap-align: start;
+}
+.main .home-container .series-selection .series-wrapper .series-carousel .serie-wrapper .serie:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.main .home-container .series-selection .series-wrapper .series-carousel .serie-wrapper .progress-bar {
+  margin: 0.6rem 0;
+  background-color: #858585;
+  width: 221px;
+  height: 7px;
+}
+.main .home-container .series-selection .series-wrapper .series-carousel .serie-wrapper .progress-bar .progress {
+  height: 7px;
+  background-color: #C60F0E;
 }
 
 /*# sourceMappingURL=styles.css.map */
