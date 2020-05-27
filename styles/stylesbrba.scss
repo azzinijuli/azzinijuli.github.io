@@ -1,0 +1,104 @@
+@import "base/reset";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap');
+$color1: black;
+$color2: white;
+$color3: rgba(157, 151, 151, 0.541521);
+$color4: rgba(85, 85, 85, 0.404);
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background-color: $color1;
+}
+
+.main {
+	font-family: 'Open Sans', sans-serif;
+	color: $color2;
+	.home-container {
+		.header-wrapper {
+			position: fixed;
+			display: flex;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.801218);
+			.nav-brand {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 0.5rem 3rem;
+			}
+			.navbar {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.nav-menu{
+					display: flex;
+					font-weight: bold;
+					font-size: 1rem;
+					.menu-item {
+						padding: 0.5rem 1rem;
+						&:hover {
+							cursor: pointer;
+							color: $color3;
+							transition: 0.3s;
+						}
+					}
+				}
+			}
+		}
+		.hero-screen {
+			background-image: url("../assets/BrBaPortada.png");
+			background-position: center;
+			background-size: cover;
+			width: 100vw;
+			height: 100vh;
+			.hero-wrapper {
+				padding-left: 3rem;
+				.hero-logo {
+					padding-top: 2rem;
+				}
+				.hero-subtitle {
+					margin-top: -2rem;
+					.sub {
+						margin-right: 0.8rem;
+						&.coincidence {
+							font-weight: bold;
+							color: green;
+						}
+						&.year {
+
+						}
+						&.age {
+							border: 1px solid $color2;
+							border-radius: 10px;
+							padding: 0.2rem 0.5rem;
+						}
+						&.season {
+							font-weight: bold;
+						}
+					}
+				}
+				.hero-buttons {
+					display: flex;
+					align-items: center;
+					padding: 2rem 0;
+					.button {
+						text-decoration: none;
+						color: $color2;
+						padding: 1rem 2rem;
+						background: $color3;
+						border-radius: 9px;
+						margin-right: 1.8rem;
+						&.play {
+							background-color: red;
+						}
+						&:hover {
+							cursor: pointer;
+							background-color: $color4;
+							transition: 0.3s;
+						}
+					}
+				}
+			}
+		}
+	} 
+} 
