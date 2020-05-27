@@ -35,7 +35,9 @@ body {
 					font-weight: bold;
 					font-size: 1rem;
 					.menu-item {
+						text-decoration: none;
 						padding: 0.5rem 1rem;
+						color: $color2;
 						&:hover {
 							cursor: pointer;
 							color: $color3;
@@ -53,6 +55,8 @@ body {
 			height: 100vh;
 			.hero-wrapper {
 				padding-left: 3rem;
+				max-width: 500px;
+				width: 100%;
 				.hero-logo {
 					padding-top: 2rem;
 				}
@@ -78,27 +82,109 @@ body {
 					}
 				}
 				.hero-buttons {
-					display: flex;
-					align-items: center;
-					padding: 2rem 0;
-					.button {
-						text-decoration: none;
-						color: $color2;
-						padding: 1rem 2rem;
-						background: $color3;
-						border-radius: 9px;
-						margin-right: 1.8rem;
-						&.play {
-							background-color: red;
+					.buttons {
+						display: flex;
+						align-items: center;
+						padding: 2rem 0;
+						.button {
+							text-decoration: none;
+							color: $color2;
+							padding: 1rem 2rem;
+							background: $color3;
+							border-radius: 9px;
+							margin-right: 1.8rem;
+							&.play {
+								background-color: red;
+							}
+							&:hover {
+								cursor: pointer;
+								background-color: $color4;
+								transition: 0.3s;
+							}
 						}
+						.like-wrapper {
+							text-decoration: none;
+							position: relative;
+							margin-right: 1rem;
+							.like {
+								.shape {
+									position: absolute;
+									top: 45%;
+									left: 50%;
+									transform: translate(-50%, -50%);
+								}
+							}
+						}
+						.dislike-wrapper {
+							text-decoration: none;
+							position: relative;
+							.dislike {
+								.shape {
+									position: absolute;
+									left: 20%;
+									top: 25%;
+									transform: translate(-50%, -50%);
+									transform: rotate(-180deg);
+								}
+							}
+						}
+					}		
+				}
+				.hero-description {
+					line-height: 1.5rem;
+				}
+			}
+		}
+	} 
+	.series-selection {
+		padding-left: 3rem;
+		.series-wrapper {
+			.series-title {
+				padding-top: 2rem;
+				padding-bottom: 1rem;
+				font-weight: bold;
+			}
+			.series-carousel {
+				display: flex;
+				overflow-x: auto;
+				scroll-snap-type: x mandatory;
+				padding-bottom: 1rem;
+				
+				&::-webkit-scrollbar {
+					height: 8px;
+					background-color: $color1;
+				}
+
+				&::-webkit-scrollbar-track {
+					background: $color1; 
+				}
+
+				&::-webkit-scrollbar-thumb {
+					background: $color3; 
+					border-radius: 20px;
+				}
+
+				&::-webkit-scrollbar-thumb:hover {
+					background: $color4; 
+					border-radius: 20px;
+				}
+				.serie-wrapper {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					margin-right: 1rem;
+					.serie {
+						scroll-snap-align: start;
+						width: 341px;
+						height: 192px;
 						&:hover {
-							cursor: pointer;
-							background-color: $color4;
-							transition: 0.3s;
+							opacity: 0.7;
+							transition: 0.2s;
 						}
 					}
 				}
 			}
 		}
-	} 
+	}
 } 

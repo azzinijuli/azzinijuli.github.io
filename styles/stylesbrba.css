@@ -86,7 +86,9 @@ body {
   font-size: 1rem;
 }
 .main .home-container .header-wrapper .navbar .nav-menu .menu-item {
+  text-decoration: none;
   padding: 0.5rem 1rem;
+  color: white;
 }
 .main .home-container .header-wrapper .navbar .nav-menu .menu-item:hover {
   cursor: pointer;
@@ -102,6 +104,8 @@ body {
 }
 .main .home-container .hero-screen .hero-wrapper {
   padding-left: 3rem;
+  max-width: 500px;
+  width: 100%;
 }
 .main .home-container .hero-screen .hero-wrapper .hero-logo {
   padding-top: 2rem;
@@ -124,12 +128,12 @@ body {
 .main .home-container .hero-screen .hero-wrapper .hero-subtitle .sub.season {
   font-weight: bold;
 }
-.main .home-container .hero-screen .hero-wrapper .hero-buttons {
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons {
   display: flex;
   align-items: center;
   padding: 2rem 0;
 }
-.main .home-container .hero-screen .hero-wrapper .hero-buttons .button {
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .button {
   text-decoration: none;
   color: white;
   padding: 1rem 2rem;
@@ -137,13 +141,83 @@ body {
   border-radius: 9px;
   margin-right: 1.8rem;
 }
-.main .home-container .hero-screen .hero-wrapper .hero-buttons .button.play {
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .button.play {
   background-color: red;
 }
-.main .home-container .hero-screen .hero-wrapper .hero-buttons .button:hover {
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .button:hover {
   cursor: pointer;
   background-color: rgba(85, 85, 85, 0.404);
   transition: 0.3s;
+}
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .like-wrapper {
+  text-decoration: none;
+  position: relative;
+  margin-right: 1rem;
+}
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .like-wrapper .like .shape {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .dislike-wrapper {
+  text-decoration: none;
+  position: relative;
+}
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .dislike-wrapper .dislike .shape {
+  position: absolute;
+  left: 20%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-180deg);
+}
+.main .home-container .hero-screen .hero-wrapper .hero-description {
+  line-height: 1.5rem;
+}
+.main .series-selection {
+  padding-left: 3rem;
+}
+.main .series-selection .series-wrapper .series-title {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+.main .series-selection .series-wrapper .series-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+.main .series-selection .series-wrapper .series-carousel::-webkit-scrollbar {
+  height: 8px;
+  background-color: black;
+}
+.main .series-selection .series-wrapper .series-carousel::-webkit-scrollbar-track {
+  background: black;
+}
+.main .series-selection .series-wrapper .series-carousel::-webkit-scrollbar-thumb {
+  background: rgba(157, 151, 151, 0.541521);
+  border-radius: 20px;
+}
+.main .series-selection .series-wrapper .series-carousel::-webkit-scrollbar-thumb:hover {
+  background: rgba(85, 85, 85, 0.404);
+  border-radius: 20px;
+}
+.main .series-selection .series-wrapper .series-carousel .serie-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie {
+  scroll-snap-align: start;
+  width: 341px;
+  height: 192px;
+}
+.main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie:hover {
+  opacity: 0.7;
+  transition: 0.2s;
 }
 
 /*# sourceMappingURL=stylesbrba.css.map */
