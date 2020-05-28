@@ -88,6 +88,9 @@ body {
   .main .home-container .header-wrapper .nav-brand .hamburger-menu {
     display: block;
   }
+  .main .home-container .header-wrapper .nav-brand .hamburger-menu:hover {
+    cursor: pointer;
+  }
 }
 .main .home-container .header-wrapper .nav-brand .hamburger-menu .line {
   width: 35px;
@@ -107,11 +110,11 @@ body {
 }
 @media screen and (max-width: 600px) {
   .main .home-container .header-wrapper .navbar .nav-menu {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
     height: 100vh;
-    display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.801218);
     padding: 0 0.5rem;
