@@ -48,8 +48,10 @@ body {
 			}
 		}
 		.hero-screen {
-			background-image: url("../assets/BrBaPortada.png");
-			background-position: center;
+			background-image: 
+			linear-gradient(to top right, $color1, rgba(0, 0, 0, 0)),
+			url("../assets/BrBaPortada.png");
+			background-position: top;
 			background-size: cover;
 			width: 100vw;
 			height: 100vh;
@@ -106,6 +108,10 @@ body {
 							text-decoration: none;
 							position: relative;
 							margin-right: 1rem;
+							&:hover {
+								transform: scale(1.1);
+								transition: 0.3s;
+							}
 							.like {
 								.shape {
 									position: absolute;
@@ -118,6 +124,10 @@ body {
 						.dislike-wrapper {
 							text-decoration: none;
 							position: relative;
+							&:hover {
+								transform: scale(1.1);
+								transition: 0.3s;
+							}
 							.dislike {
 								.shape {
 									position: absolute;

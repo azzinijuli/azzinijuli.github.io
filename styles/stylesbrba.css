@@ -96,8 +96,8 @@ body {
   transition: 0.3s;
 }
 .main .home-container .hero-screen {
-  background-image: url("../assets/BrBaPortada.png");
-  background-position: center;
+  background-image: linear-gradient(to top right, black, rgba(0, 0, 0, 0)), url("../assets/BrBaPortada.png");
+  background-position: top;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -154,6 +154,10 @@ body {
   position: relative;
   margin-right: 1rem;
 }
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .like-wrapper:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .like-wrapper .like .shape {
   position: absolute;
   top: 45%;
@@ -163,6 +167,10 @@ body {
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .dislike-wrapper {
   text-decoration: none;
   position: relative;
+}
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .dislike-wrapper:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .dislike-wrapper .dislike .shape {
   position: absolute;
