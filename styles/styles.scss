@@ -53,6 +53,14 @@ body {
 					display: inline-flex;
 					font-weight: bold;
 					font-size: 1rem;
+					.menu-item {
+						padding: 0.5rem 1rem;
+						&:hover {
+							cursor: pointer;
+							color: $color3;
+							transition: 0.3s;
+						}
+					}
 					@media screen and (max-width: 600px) {
 						display: none;
 						position: absolute;
@@ -62,17 +70,12 @@ body {
 						flex-direction: column;
 						background-color: rgba(0, 0, 0, 0.801218);
 						padding: 0 0.5rem;
-					}
-					.menu-item {
-						padding: 0.5rem 1rem;
-						@media screen and (max-width: 600px) {
-							padding-bottom: 1rem;
+							&.show {
+								display: inline-flex;
+							}
+							.menu-item {
 							display: inline-flex;
-						}
-						&:hover {
-							cursor: pointer;
-							color: $color3;
-							transition: 0.3s;
+							padding-bottom: 1rem;
 						}
 					}
 				}

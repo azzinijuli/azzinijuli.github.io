@@ -108,6 +108,14 @@ body {
   font-weight: bold;
   font-size: 1rem;
 }
+.main .home-container .header-wrapper .navbar .nav-menu .menu-item {
+  padding: 0.5rem 1rem;
+}
+.main .home-container .header-wrapper .navbar .nav-menu .menu-item:hover {
+  cursor: pointer;
+  color: rgba(157, 151, 151, 0.541521);
+  transition: 0.3s;
+}
 @media screen and (max-width: 600px) {
   .main .home-container .header-wrapper .navbar .nav-menu {
     display: none;
@@ -119,20 +127,13 @@ body {
     background-color: rgba(0, 0, 0, 0.801218);
     padding: 0 0.5rem;
   }
-}
-.main .home-container .header-wrapper .navbar .nav-menu .menu-item {
-  padding: 0.5rem 1rem;
-}
-@media screen and (max-width: 600px) {
-  .main .home-container .header-wrapper .navbar .nav-menu .menu-item {
-    padding-bottom: 1rem;
+  .main .home-container .header-wrapper .navbar .nav-menu.show {
     display: inline-flex;
   }
-}
-.main .home-container .header-wrapper .navbar .nav-menu .menu-item:hover {
-  cursor: pointer;
-  color: rgba(157, 151, 151, 0.541521);
-  transition: 0.3s;
+  .main .home-container .header-wrapper .navbar .nav-menu .menu-item {
+    display: inline-flex;
+    padding-bottom: 1rem;
+  }
 }
 .main .home-container .hero-screen {
   background-image: url("../assets/portada.png");
