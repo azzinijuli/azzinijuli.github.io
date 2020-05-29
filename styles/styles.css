@@ -53,6 +53,10 @@ table {
   border-spacing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -116,6 +120,8 @@ body {
 }
 .main .home-container .header-wrapper .navbar .nav-menu .menu-item {
   padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
 }
 .main .home-container .header-wrapper .navbar .nav-menu .menu-item:hover {
   cursor: pointer;
@@ -198,6 +204,10 @@ body {
   background: rgba(157, 151, 151, 0.541521);
   border-radius: 9px;
   margin-right: 1.8rem;
+}
+.main .home-container .hero-screen .hero-wrapper .hero-buttons .button.play {
+  text-decoration: none;
+  color: white;
 }
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .button:hover {
   cursor: pointer;

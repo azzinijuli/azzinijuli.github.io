@@ -5,6 +5,10 @@ $color2: white;
 $color3: rgba(157, 151, 151, 0.541521);
 $color4: rgba(85, 85, 85, 0.404);
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
@@ -59,6 +63,8 @@ body {
 					font-size: 1rem;
 					.menu-item {
 						padding: 0.5rem 1rem;
+						text-decoration: none;
+						color: $color2;
 						&:hover {
 							cursor: pointer;
 							color: $color3;
@@ -137,6 +143,10 @@ body {
 						background: $color3;
 						border-radius: 9px;
 						margin-right: 1.8rem;
+						&.play {
+							text-decoration: none;
+							color: $color2;
+						}
 						&:hover {
 							cursor: pointer;
 							background-color: $color4;
