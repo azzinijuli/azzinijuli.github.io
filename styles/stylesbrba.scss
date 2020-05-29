@@ -20,11 +20,34 @@ body {
 			display: flex;
 			width: 100%;
 			background-color: rgba(0, 0, 0, 0.801218);
+			@media screen and (max-width: 600px){
+				background-color: $color1;				
+			}
 			.nav-brand {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				padding: 0.5rem 3rem;
+				@media screen and (max-width: 600px) {
+					padding: 0.5rem;
+				}
+				.hamburger-menu {
+					display: none;
+					padding-left: 0.5rem;
+					padding-right: 1rem;
+					@media screen and (max-width: 600px) {
+						display: block;
+						&:hover {
+							cursor: pointer;
+						}
+					}
+					.line {
+						width: 35px;
+						height: 5px;
+						background-color: $color2;
+						margin: 6px 0;
+					}
+				}
 			}
 			.navbar {
 				display: flex;
@@ -44,6 +67,22 @@ body {
 							transition: 0.3s;
 						}
 					}
+					@media screen and (max-width: 600px) {
+						display: none;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						height: 100vh;
+						flex-direction: column;
+						background-color: $color1;
+							&.show {
+								display: inline-flex;
+							}
+							.menu-item {
+							display: inline-flex;
+							padding-bottom: 1rem;
+						}
+					}
 				}
 			}
 		}
@@ -53,17 +92,54 @@ body {
 			url("../assets/BrBaPortada.png");
 			background-position: top;
 			background-size: cover;
-			width: 100vw;
-			height: 100vh;
+			max-width: 1499px;
+			max-height: 843px;
+			width: 100%;
+			@media screen and (max-width: 600px) {
+				width: 100%;
+				height: 40vh;
+				background-image: 
+				linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)),
+				url("../assets/BrBaPortada.png");
+				background-position: top;
+			}
+			height: 100%;
 			.hero-wrapper {
 				padding-left: 3rem;
 				max-width: 500px;
 				width: 100%;
+				@media screen and (max-width: 600px) {
+					padding-left: 1rem;
+				}
 				.hero-logo {
 					padding-top: 2rem;
+					@media screen and (max-width: 600px) {
+						display: none;
+					}
+				}
+				.logo-mobile {
+					.title-mobile {
+						display: none;
+						@media screen and (max-width: 600px) {
+							display: block;
+							padding-top: 6rem;
+							font-size: 1.5rem;
+							font-weight: bold;
+							padding-bottom: 0.2rem;
+						}
+					}
+					.sub-mobile {
+						display: none;
+						@media screen and (max-width: 600px) {
+							display: block;
+						}
+					}
 				}
 				.hero-subtitle {
 					margin-top: -2rem;
+					@media screen and (max-width: 600px) {
+						display: none;
+					}
 					.sub {
 						margin-right: 0.8rem;
 						&.coincidence {
@@ -103,11 +179,24 @@ body {
 								background-color: $color4;
 								transition: 0.3s;
 							}
+							@media screen and (max-width: 600px) {
+								padding: 0.8rem 1.5rem;
+								&.play {
+									background-color: red;
+									&:hover {
+										background-color: rgba(255, 0, 0, 0.788);
+										transition: 0.3s;
+									}
+								}
+							}
 						}
 						.like-wrapper {
 							text-decoration: none;
 							position: relative;
 							margin-right: 1rem;
+							@media screen and (max-width: 600px) {
+								display: none;
+							}
 							&:hover {
 								transform: scale(1.1);
 								transition: 0.3s;
@@ -124,6 +213,9 @@ body {
 						.dislike-wrapper {
 							text-decoration: none;
 							position: relative;
+							@media screen and (max-width: 600px) {
+								display: none;
+							}
 							&:hover {
 								transform: scale(1.1);
 								transition: 0.3s;
@@ -142,12 +234,18 @@ body {
 				}
 				.hero-description {
 					line-height: 1.5rem;
+					@media screen and (max-width: 600px) {
+						display: none;
+					}
 				}
 			}
 		}
 	} 
 	.series-selection {
 		padding-left: 3rem;
+		@media screen and (max-width: 600px) {
+			padding-left: 1rem;
+		}
 		.series-wrapper {
 			.series-title {
 				padding-top: 2rem;
@@ -159,6 +257,11 @@ body {
 				overflow-x: auto;
 				scroll-snap-type: x mandatory;
 				padding-bottom: 1rem;
+				@media screen and (max-width: 600px) {
+					display: flex;
+					flex-direction: column;
+					padding-bottom: 1rem;
+				}
 				
 				&::-webkit-scrollbar {
 					height: 8px;
@@ -179,18 +282,43 @@ body {
 					border-radius: 20px;
 				}
 				.serie-wrapper {
-					display: flex;
-					flex-direction: column;
-					justify-content: center;
-					align-items: center;
 					margin-right: 1rem;
+					display: flex;
+					flex-direction: row;
 					.serie {
 						scroll-snap-align: start;
-						width: 341px;
-						height: 192px;
+						min-width: 341px;
+						min-height: 192px;
+						width: 100%;
+						height: 100%;
 						&:hover {
 							opacity: 0.7;
 							transition: 0.2s;
+						}
+					}
+					.chapter-title {
+						display: none;
+					}
+					.chapter-description {
+						display: none;
+					}
+					@media screen and (max-width: 600px) {
+						.chapter-title {
+							display: block;
+							font-weight: bold;
+							padding-left: 1rem;
+							font-size: 1rem;
+						}
+						.chapter-description {
+							display: block;
+							padding-left: 1rem;
+							font-size: 0.9rem;
+							line-height: 1rem;
+						}
+						.serie {
+							width: 300px;
+							height: 150px;
+							padding-bottom: 1rem;
 						}
 					}
 				}

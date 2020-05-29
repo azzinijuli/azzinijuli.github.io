@@ -69,11 +69,40 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.801218);
 }
+@media screen and (max-width: 600px) {
+  .main .home-container .header-wrapper {
+    background-color: black;
+  }
+}
 .main .home-container .header-wrapper .nav-brand {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem 3rem;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .header-wrapper .nav-brand {
+    padding: 0.5rem;
+  }
+}
+.main .home-container .header-wrapper .nav-brand .hamburger-menu {
+  display: none;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .header-wrapper .nav-brand .hamburger-menu {
+    display: block;
+  }
+  .main .home-container .header-wrapper .nav-brand .hamburger-menu:hover {
+    cursor: pointer;
+  }
+}
+.main .home-container .header-wrapper .nav-brand .hamburger-menu .line {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
 }
 .main .home-container .header-wrapper .navbar {
   display: flex;
@@ -95,23 +124,86 @@ body {
   color: rgba(157, 151, 151, 0.541521);
   transition: 0.3s;
 }
+@media screen and (max-width: 600px) {
+  .main .home-container .header-wrapper .navbar .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 100vh;
+    flex-direction: column;
+    background-color: black;
+  }
+  .main .home-container .header-wrapper .navbar .nav-menu.show {
+    display: inline-flex;
+  }
+  .main .home-container .header-wrapper .navbar .nav-menu .menu-item {
+    display: inline-flex;
+    padding-bottom: 1rem;
+  }
+}
 .main .home-container .hero-screen {
   background-image: linear-gradient(to top right, black, rgba(0, 0, 0, 0)), url("../assets/BrBaPortada.png");
   background-position: top;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  max-width: 1499px;
+  max-height: 843px;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen {
+    width: 100%;
+    height: 40vh;
+    background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0)), url("../assets/BrBaPortada.png");
+    background-position: top;
+  }
 }
 .main .home-container .hero-screen .hero-wrapper {
   padding-left: 3rem;
   max-width: 500px;
   width: 100%;
 }
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper {
+    padding-left: 1rem;
+  }
+}
 .main .home-container .hero-screen .hero-wrapper .hero-logo {
   padding-top: 2rem;
 }
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .hero-logo {
+    display: none;
+  }
+}
+.main .home-container .hero-screen .hero-wrapper .logo-mobile .title-mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .logo-mobile .title-mobile {
+    display: block;
+    padding-top: 6rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+  }
+}
+.main .home-container .hero-screen .hero-wrapper .logo-mobile .sub-mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .logo-mobile .sub-mobile {
+    display: block;
+  }
+}
 .main .home-container .hero-screen .hero-wrapper .hero-subtitle {
   margin-top: -2rem;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .hero-subtitle {
+    display: none;
+  }
 }
 .main .home-container .hero-screen .hero-wrapper .hero-subtitle .sub {
   margin-right: 0.8rem;
@@ -149,10 +241,27 @@ body {
   background-color: rgba(85, 85, 85, 0.404);
   transition: 0.3s;
 }
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .button {
+    padding: 0.8rem 1.5rem;
+  }
+  .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .button.play {
+    background-color: red;
+  }
+  .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .button.play:hover {
+    background-color: rgba(255, 0, 0, 0.788);
+    transition: 0.3s;
+  }
+}
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .like-wrapper {
   text-decoration: none;
   position: relative;
   margin-right: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .like-wrapper {
+    display: none;
+  }
 }
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .like-wrapper:hover {
   transform: scale(1.1);
@@ -168,6 +277,11 @@ body {
   text-decoration: none;
   position: relative;
 }
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .dislike-wrapper {
+    display: none;
+  }
+}
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .dislike-wrapper:hover {
   transform: scale(1.1);
   transition: 0.3s;
@@ -182,8 +296,18 @@ body {
 .main .home-container .hero-screen .hero-wrapper .hero-description {
   line-height: 1.5rem;
 }
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .hero-description {
+    display: none;
+  }
+}
 .main .series-selection {
   padding-left: 3rem;
+}
+@media screen and (max-width: 600px) {
+  .main .series-selection {
+    padding-left: 1rem;
+  }
 }
 .main .series-selection .series-wrapper .series-title {
   padding-top: 2rem;
@@ -195,6 +319,13 @@ body {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding-bottom: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .main .series-selection .series-wrapper .series-carousel {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
 }
 .main .series-selection .series-wrapper .series-carousel::-webkit-scrollbar {
   height: 8px;
@@ -212,20 +343,45 @@ body {
   border-radius: 20px;
 }
 .main .series-selection .series-wrapper .series-carousel .serie-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-right: 1rem;
+  display: flex;
+  flex-direction: row;
 }
 .main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie {
   scroll-snap-align: start;
-  width: 341px;
-  height: 192px;
+  min-width: 341px;
+  min-height: 192px;
+  width: 100%;
+  height: 100%;
 }
 .main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie:hover {
   opacity: 0.7;
   transition: 0.2s;
+}
+.main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-title {
+  display: none;
+}
+.main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-description {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-title {
+    display: block;
+    font-weight: bold;
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-description {
+    display: block;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie {
+    width: 300px;
+    height: 150px;
+    padding-bottom: 1rem;
+  }
 }
 
 /*# sourceMappingURL=stylesbrba.css.map */

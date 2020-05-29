@@ -194,6 +194,17 @@ body {
   .main .home-container .hero-screen .hero-wrapper .hero-title .title {
     padding-top: 6rem;
     font-size: 1.5rem;
+    padding-bottom: 0.2rem;
+  }
+}
+.main .home-container .hero-screen .hero-wrapper .hero-title .subtitle-mobile {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .main .home-container .hero-screen .hero-wrapper .hero-title .subtitle-mobile {
+    display: block;
   }
 }
 .main .home-container .hero-screen .hero-wrapper .hero-buttons {
@@ -226,17 +237,17 @@ body {
     transition: 0.3s;
   }
 }
-.main .home-container .hero-screen .hero-wrapper .hero-season {
+.main .home-container .hero-screen .hero-wrapper .hero-season .season {
   padding: 0.8rem 0;
 }
-.main .home-container .hero-screen .hero-wrapper .hero-season:hover {
+.main .home-container .hero-screen .hero-wrapper .hero-season .season:hover {
   margin-left: 0.8rem;
   cursor: pointer;
   transform: scale(1.1);
   transition: 0.3s;
 }
 @media screen and (max-width: 600px) {
-  .main .home-container .hero-screen .hero-wrapper .hero-season {
+  .main .home-container .hero-screen .hero-wrapper .hero-season .season {
     display: none;
   }
 }
