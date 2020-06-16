@@ -130,6 +130,7 @@ body {
 					}
 					.sub-mobile {
 						display: none;
+						padding-top: 0.2rem;
 						@media screen and (max-width: 600px) {
 							display: block;
 						}
@@ -160,10 +161,11 @@ body {
 					}
 				}
 				.hero-buttons {
+					display: flex;
 					.buttons {
 						display: flex;
 						align-items: center;
-						padding: 2rem 0;
+						padding: 1.5rem 0;
 						.button {
 							text-decoration: none;
 							color: $color2;
@@ -247,6 +249,8 @@ body {
 			padding-left: 1rem;
 		}
 		.series-wrapper {
+			display: flex;
+			flex-direction: column;
 			.series-title {
 				padding-top: 2rem;
 				padding-bottom: 1rem;
@@ -287,37 +291,41 @@ body {
 					flex-direction: row;
 					.serie {
 						scroll-snap-align: start;
-						min-width: 341px;
-						min-height: 192px;
-						width: 100%;
-						height: 100%;
+						display: flex;
 						&:hover {
 							opacity: 0.7;
 							transition: 0.2s;
 						}
 					}
-					.chapter-title {
-						display: none;
-					}
-					.chapter-description {
-						display: none;
-					}
-					@media screen and (max-width: 600px) {
+					.description-wrapper {
 						.chapter-title {
-							display: block;
-							font-weight: bold;
-							padding-left: 1rem;
-							font-size: 1rem;
+							display: none;
 						}
 						.chapter-description {
-							display: block;
-							padding-left: 1rem;
-							font-size: 0.9rem;
-							line-height: 1rem;
+							display: none;
+						}
+					}
+					@media screen and (max-width: 600px) {
+						.description-wrapper {
+							display: flex;
+							flex-direction: column;
+							.chapter-title {
+								display: flex;
+								flex-direction: column;
+								font-weight: bold;
+								padding-left: 1rem;
+								font-size: 1rem;
+							}
+							.chapter-description {
+								display: flex;
+								flex-direction: column;
+								padding-left: 1rem;
+								font-size: 0.9rem;
+								line-height: 1rem;
+							}
 						}
 						.serie {
-							width: 300px;
-							height: 150px;
+							display: flex;
 							padding-bottom: 1rem;
 						}
 					}

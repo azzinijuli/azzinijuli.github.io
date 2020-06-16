@@ -191,6 +191,7 @@ body {
 }
 .main .home-container .hero-screen .hero-wrapper .logo-mobile .sub-mobile {
   display: none;
+  padding-top: 0.2rem;
 }
 @media screen and (max-width: 600px) {
   .main .home-container .hero-screen .hero-wrapper .logo-mobile .sub-mobile {
@@ -220,10 +221,13 @@ body {
 .main .home-container .hero-screen .hero-wrapper .hero-subtitle .sub.season {
   font-weight: bold;
 }
+.main .home-container .hero-screen .hero-wrapper .hero-buttons {
+  display: flex;
+}
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 .main .home-container .hero-screen .hero-wrapper .hero-buttons .buttons .button {
   text-decoration: none;
@@ -309,6 +313,10 @@ body {
     padding-left: 1rem;
   }
 }
+.main .series-selection .series-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .main .series-selection .series-wrapper .series-title {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -349,37 +357,39 @@ body {
 }
 .main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie {
   scroll-snap-align: start;
-  min-width: 341px;
-  min-height: 192px;
-  width: 100%;
-  height: 100%;
+  display: flex;
 }
 .main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie:hover {
   opacity: 0.7;
   transition: 0.2s;
 }
-.main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-title {
+.main .series-selection .series-wrapper .series-carousel .serie-wrapper .description-wrapper .chapter-title {
   display: none;
 }
-.main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-description {
+.main .series-selection .series-wrapper .series-carousel .serie-wrapper .description-wrapper .chapter-description {
   display: none;
 }
 @media screen and (max-width: 600px) {
-  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-title {
-    display: block;
+  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .description-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .description-wrapper .chapter-title {
+    display: flex;
+    flex-direction: column;
     font-weight: bold;
     padding-left: 1rem;
     font-size: 1rem;
   }
-  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .chapter-description {
-    display: block;
+  .main .series-selection .series-wrapper .series-carousel .serie-wrapper .description-wrapper .chapter-description {
+    display: flex;
+    flex-direction: column;
     padding-left: 1rem;
     font-size: 0.9rem;
     line-height: 1rem;
   }
   .main .series-selection .series-wrapper .series-carousel .serie-wrapper .serie {
-    width: 300px;
-    height: 150px;
+    display: flex;
     padding-bottom: 1rem;
   }
 }

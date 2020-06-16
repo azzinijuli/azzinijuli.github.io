@@ -24,6 +24,7 @@ body {
 			display: flex;
 			width: 100%;
 			background-color: rgba(0, 0, 0, 0.801218);
+			z-index: 999999;
 			@media screen and (max-width: 600px){
 				background-color: $color1;				
 			}
@@ -210,26 +211,24 @@ body {
 				.series-carousel {
 					display: flex;
 					overflow-x: auto;
-					scroll-snap-type: x mandatory;
 					padding-bottom: 1rem;
 					
 					&::-webkit-scrollbar {
-						height: 8px;
-						background-color: $color1;
+						display: none;
 					}
 
-					&::-webkit-scrollbar-track {
-						background: $color1; 
+					.slick-prev,
+					.slick-next,
+					.slick-arrow {
+						z-index: 999;
 					}
-
-					&::-webkit-scrollbar-thumb {
-						background: $color3; 
-						border-radius: 20px;
+			
+					.slick-prev {
+						left: 0;
 					}
-
-					&::-webkit-scrollbar-thumb:hover {
-						background: $color4; 
-						border-radius: 20px;
+			
+					.slick-next {
+						right: 0;
 					}
 					.serie-wrapper {
 						display: flex;
@@ -238,7 +237,6 @@ body {
 						align-items: center;
 						margin-right: 1rem;
 						.serie {
-							scroll-snap-align: start;
 							&:hover {
 								opacity: 0.7;
 								transition: 0.2s;
